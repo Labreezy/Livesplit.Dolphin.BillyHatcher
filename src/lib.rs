@@ -123,7 +123,7 @@ fn split(watchers: &Watchers) -> bool {
     if watchers.game_id.pair.expect("WHOOPS (GAMEID)").current != TARGET_GAME_ID {
         return false;
     }
-    if watchers.results_active.pair.expect("WHOOPS (SPLIT)").changed_from(&0) {
+    if watchers.results_active.pair.expect("WHOOPS (SPLIT)").changed_to(&2) {
         return true;
     }
     return false;
